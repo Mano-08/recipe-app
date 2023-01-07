@@ -1,0 +1,57 @@
+.home {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.frame {
+	position: absolute;
+	width: 30%;
+	height: 60vh;
+	z-index: -1;
+	background-color: aliceblue;
+}
+
+.home_text {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.home_quote {
+	font-size: 3rem;
+}
+
+.home_chefImg {
+	position: relative;
+	padding: 10vh 0 5vh;
+	height: 100vh;
+	width: auto;
+	object-fit: cover;
+	user-select: none;
+}
+
+.home_button {
+	border: none;
+	font-size: 1.3rem;
+	margin-top: 2vh;
+	background-color: green;
+	color: white;
+	height: 8vh;
+	justify-content: center;
+	user-select: none;
+}
+
+.home_button:active {
+	outline-style: none;
+}
+.home_button:hover {
+	background-color: rgb(0, 153, 0);
+}
+
+.wrapper {
+	padding-top: 5vh;
+	font-size: 1.4rem;
+	display: inline-grid;
+}

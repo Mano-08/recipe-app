@@ -9,7 +9,7 @@ function Navbar() {
       <ul className={classes.navlinks}>
         <li>
           <Link href="/books" className={classes.link}>
-            Meals
+            Explore
           </Link>
         </li>
         <li>

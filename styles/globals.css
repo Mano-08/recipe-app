@@ -10,6 +10,16 @@ html {
 	padding: 0;
 }
 
+::-moz-selection {
+	color: rgb(0, 0, 0);
+	background: rgb(0, 247, 165);
+}
+
+::selection {
+	color: rgb(0, 0, 0);
+	background: rgb(0, 247, 165);
+}
+
 ::-webkit-scrollbar {
 	width: 10px;
 }
