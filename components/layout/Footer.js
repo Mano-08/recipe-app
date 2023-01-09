@@ -16,11 +16,12 @@ function Footer() {
 
       </p>
       <p className={classes.copyright}>
-        ©
+
+        Copyright ©
         {' '}
         {year}
         {' '}
-        at Recipe-App
+        Recipe-App
       </p>
     </footer>
   );

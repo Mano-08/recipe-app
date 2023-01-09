@@ -5,7 +5,7 @@
 	flex-direction: column;
 	text-align: center;
 	gap: 30%;
-	background-color: rgb(55, 7, 0);
+	background-color: rgb(31, 0, 0);
 }
 
 .footerText {
@@ -23,4 +23,5 @@
 .copyright {
 	color: rgba(240, 255, 255, 0.48);
 	font-size: 0.9rem;
+	user-select: none;
 }

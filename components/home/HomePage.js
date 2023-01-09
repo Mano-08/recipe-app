@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import classes from './HomePage.module.scss';
 import chef from '../../images/chef.png';
 
@@ -25,7 +26,11 @@ export default function HomePage() {
           <p>
             Uncover your favourite recipe Now!
           </p>
-          <button type="button" className={classes.home_button}>Explore All</button>
+          <Link href="/recipes" className={classes.home_button}>
+            <div type="button">
+              Explore All
+            </div>
+          </Link>
         </div>
       </section>
 

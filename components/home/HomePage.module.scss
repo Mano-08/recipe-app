@@ -25,21 +25,22 @@
 
 .home_chefImg {
 	position: relative;
-	padding: 10vh 0 5vh;
-	height: 100vh;
+	height: 85vh;
 	width: auto;
 	object-fit: cover;
 	user-select: none;
 }
 
 .home_button {
-	border: none;
+	text-decoration: none;
 	font-size: 1.3rem;
 	margin-top: 2vh;
 	background-color: green;
-	color: white;
+	color: rgb(182, 182, 182);
 	height: 8vh;
+	display: flex;
 	justify-content: center;
+	align-items: center;
 	user-select: none;
 }
 
@@ -47,7 +48,7 @@
 	outline-style: none;
 }
 .home_button:hover {
-	background-color: rgb(0, 153, 0);
+	background-color: rgb(0, 138, 0);
 }
 
 .wrapper {

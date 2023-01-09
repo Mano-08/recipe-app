@@ -8,12 +8,12 @@ function Navbar() {
       <p className={classes.logo}>Recipe-App</p>
       <ul className={classes.navlinks}>
         <li>
-          <Link href="/books" className={classes.link}>
+          <Link href="/recipes" className={classes.link}>
             Explore
           </Link>
         </li>
         <li>
-          <Link href="/savedList" className={classes.link}>
+          <Link href="/favourites" className={classes.link}>
             Favourites
           </Link>
         </li>
