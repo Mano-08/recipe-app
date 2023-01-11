@@ -15,11 +15,10 @@ const queryClient = new QueryClient({
 export default function App({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
-      <Toaster position="top-left" toastOptions={{ toastOptions: { style: { fontSize: '1.4rem' } } }} />
+      <Toaster position="top-right" toastOptions={{ toastOptions: { style: { fontSize: '1.4rem' } } }} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-
     </QueryClientProvider>
   );
 }

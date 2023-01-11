@@ -38,3 +38,19 @@
 	padding: 1.5vh;
 	filter: invert(90%);
 }
+
+.results {
+	margin: 5% 0;
+	width: 100%;
+	min-height: auto;
+}
+
+.searchResults {
+	width: 90%;
+	margin-left: 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	// background-color: aqua;
+}
