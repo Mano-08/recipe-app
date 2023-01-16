@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
-import Loader from '../../components/recipe/Loader';
+import Loader from '../../components/explore/Loader';
 import classes from './recipes.module.scss';
 import searchImage from '../../images/search.png';
 import useDebounce from '../hooks/useDebounce';
-import SearchResult from '../../components/recipe/SearchResult';
-import DataNotFound from '../../components/recipe/DataNotFound';
-import Error from '../../components/recipe/Error';
+import SearchResult from '../../components/explore/SearchResult';
+import DataNotFound from '../../components/explore/DataNotFound';
+import Error from '../../components/explore/Error';
 import preloadedData from './preloadedData';
 
 function Recipes() {
@@ -18,6 +18,7 @@ function Recipes() {
     queryKey: ['search', debouncedSearchTerm],
     queryFn: () => {
       if (debouncedSearchTerm) {
+        // }
         return fetch(`https://api.edamam.com/search?q=${debouncedSearchTerm}&to=15&app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}`)
           .then((res) => res.json());
       }
@@ -45,7 +46,6 @@ function Recipes() {
       return <DataNotFound />;
     }
 
-    console.log(data.hits);
     return (
       <div className={classes.searchResults}>
         {data?.hits.map((element) => {

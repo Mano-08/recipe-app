@@ -26,7 +26,7 @@ export default function HomePage() {
           <p>
             Uncover your favourite recipe Now!
           </p>
-          <Link href="/recipes" className={classes.home_button}>
+          <Link href="/explore" className={classes.home_button}>
             <div type="button">
               Explore All
             </div>
