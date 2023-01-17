@@ -18,7 +18,6 @@ function Recipes() {
     queryKey: ['search', debouncedSearchTerm],
     queryFn: () => {
       if (debouncedSearchTerm) {
-        // }
         return fetch(`https://api.edamam.com/search?q=${debouncedSearchTerm}&to=15&app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}`)
           .then((res) => res.json());
       }

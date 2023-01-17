@@ -1,0 +1,55 @@
+.searchBarBlock {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.searchInput {
+  height: 6vh;
+  width: 25vw;
+  font-size: 1.01rem;
+  border: none;
+  padding: 0 1%;
+  color: black;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-style: none;
+}
+
+.searchButton {
+  border: none;
+  height: 6vh;
+  font-size: 1.01rem;
+  color: azure;
+  user-select: none;
+  background-color: green;
+}
+
+.searchButton:hover {
+  background-color: rgb(0, 156, 0);
+}
+
+.searchButton img {
+  height: inherit;
+  width: auto;
+  padding: 1.5vh;
+  filter: invert(90%);
+}
+
+.results {
+  margin: 5% 0;
+  width: 100%;
+  min-height: auto;
+}
+
+.searchResults {
+  width: 90%;
+  margin-left: 5%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=recipes.module.css.map */

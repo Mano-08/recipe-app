@@ -1,23 +1,23 @@
 .card {
 	min-height: 60vh;
 	height: auto;
-	width: 25%;
+	width: 50vh;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	margin-bottom: 4%;
 	border-radius: 7px;
 	overflow: hidden;
 	background-color: rgb(2, 36, 36);
-}
-
-.card img {
-	height: auto;
-	width: 100%;
-	object-fit: cover;
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 .dish_info {
-	position: relative;
+	display: flex;
+	flex-direction: column;
 	padding: 3%;
 }
 
@@ -26,35 +26,52 @@
 	width: 100%;
 	min-height: 5vh;
 	margin-bottom: 1.5vh;
-	height: auto;
-}
-
-.dish_name p {
-	left: 0;
-	width: 60%;
-	font-size: 20px;
-	position: relative;
-}
-.dish_name button {
-	color: rgb(160, 160, 160);
-	top: 0;
-	right: 0;
-	width: 35%;
-	font-size: 15px;
-	height: 4vh;
-	position: absolute;
-	border-style: none;
-	background-color: rgb(65, 65, 65);
-}
-
-.dish_name button:hover {
-	border-style: none;
-	background-color: rgb(86, 86, 86);
+	height: 3.1rem;
+	font-size: 1.4rem;
 }
 
 .dish_numeric_info p {
 	color: rgb(112, 131, 147);
-	font-size: 15px;
+	font-size: 1.01rem;
 	width: 100%;
 	height: auto;
+	margin-bottom: 0.6rem;
+}
+
+.recipe_buttons {
+	display: flex;
+	flex-direction: row;
+
+	button {
+		bottom: 0;
+		width: 48%;
+		height: 2.2rem;
+		margin-right: 4%;
+		font-size: 1.05rem;
+		font-weight: 600;
+		border-radius: 3px;
+		background-color: rgb(185, 96, 0);
+		color: rgb(212, 212, 212);
+		border-style: none;
+		border: 1px solid black;
+	}
+	button:focus {
+		outline: none;
+	}
+	button:hover {
+		background-color: rgb(228, 118, 0);
+		color: rgb(196, 196, 196);
+	}
+	a {
+		width: 48%;
+		button {
+			width: 100%;
+			background-color: rgb(180, 180, 180);
+			color: rgb(31, 17, 0);
+		}
+		button:hover {
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+		}
+	}
 }
