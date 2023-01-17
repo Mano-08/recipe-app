@@ -17,7 +17,7 @@ function SearchResult(props) {
   return (
     <div className={classes.card}>
       <Dialog id="dialogBox" open={display} onKeyDown={(e) => { if (e.key === 'Escape') { handleEscape(); } }}>
-        <DialogTitle>Ingredients</DialogTitle>
+        <DialogTitle />
         <DialogContent>{ingredients}</DialogContent>
         <button
           type="button"
