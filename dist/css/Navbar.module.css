@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.44);
+  align-items: center;
+  z-index: 1;
+  user-select: none;
+}
+
+.logo {
+  font-family: "Schoolbell", cursive;
+  font-size: 2.5rem;
+  margin-left: 5%;
+  cursor: default;
+  color: orange;
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1.5vw;
+  margin-right: 5%;
+}
+
+.link:hover {
+  color: rgb(247, 247, 247);
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Navbar.module.css.map */

@@ -5,6 +5,11 @@
 	justify-content: center;
 }
 
+.searchResults {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .searchInput {
 	height: 6vh;
 	width: 25vw;

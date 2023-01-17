@@ -8,22 +8,28 @@ function SearchResult(props) {
   const calories = Math.round((info.recipe.calories + Number.EPSILON) * 100) / 100;
   const [display, setDisplay] = React.useState(false);
   const ingredients = info.recipe.ingredientLines;
-  const handleEscape = () => {
-    if (display === true) {
+  const handleEscape = (e) => {
+    if (e.key === 'Escape' && display === true) {
       setDisplay(false);
     }
   };
 
+  const handleClose = () => {
+    display === true ? setDisplay(false) : setDisplay(true);
+  };
+
   return (
     <div className={classes.card}>
-      <Dialog id="dialogBox" open={display} onKeyDown={(e) => { if (e.key === 'Escape') { handleEscape(); } }}>
-        <DialogTitle />
-        <DialogContent>{ingredients}</DialogContent>
+      <Dialog disableTypography PaperProps={{ id: 'dialogBox' }} open={display} onKeyDown={handleEscape}>
+        <DialogTitle disableTypography PaperProps={{ style: { color: 'red' } }}><h1>Ingredients</h1></DialogTitle>
+        <DialogContent>
+          <ul>
+            {ingredients.map((element) => <li>{element}</li>)}
+          </ul>
+        </DialogContent>
         <button
           type="button"
-          onClick={() => {
-            display === true ? setDisplay(false) : setDisplay(true);
-          }}
+          onClick={handleClose}
         >
           Close it!
 
@@ -34,12 +40,13 @@ function SearchResult(props) {
       <div className={classes.dish_info}>
         <section className={classes.dish_name}>
           <p>{info.recipe.label}</p>
-          <Link href="/explore/recipe" value={info.recipe.ingredients}><button type="button">View Recipe</button></Link>
         </section>
         <section className={classes.dish_numeric_info}>
           <p>{`Calories: ${calories}`}</p>
-          <p>{ info.recipe.dietLabels.length !== 0 ? `Labels: ${info.recipe.dietLabels}` : ''}</p>
-          <button type="button" onClick={() => (display === true ? setDisplay(false) : setDisplay(true))}>dialog BOX</button>
+        </section>
+        <section className={classes.recipe_buttons}>
+          <button type="button" onClick={handleClose}>Ingredients</button>
+          <Link href={info.recipe.url} target="_blank"><button type="button">Recipe</button></Link>
         </section>
       </div>
     </div>

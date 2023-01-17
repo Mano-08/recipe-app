@@ -1,0 +1,21 @@
+.error404_page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 60vh;
+}
+
+.error404_message h1 {
+  font-size: 4em;
+}
+
+.error404_message p {
+  font-size: 1.5rem;
+}
+
+.error404_image {
+  margin-left: 3%;
+  height: 40vh;
+  width: auto;
+  border-radius: 50%;
+}/*# sourceMappingURL=DataNotFound.module.css.map */
