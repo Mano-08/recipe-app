@@ -10,6 +10,17 @@ html {
 	padding: 0;
 }
 
+button:hover {
+	cursor: pointer;
+}
+button {
+	user-select: none;
+}
+
+img {
+	user-select: none;
+}
+
 ::-moz-selection {
 	color: rgb(0, 0, 0);
 	background: rgb(0, 247, 165);

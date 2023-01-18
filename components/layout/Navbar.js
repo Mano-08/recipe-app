@@ -8,7 +8,7 @@ function Navbar() {
       <p className={classes.logo}>Recipe-App</p>
       <ul className={classes.navlinks}>
         <li>
-          <Link href="/recipes" className={classes.link}>
+          <Link href="/explore" className={classes.link}>
             Explore
           </Link>
         </li>
