@@ -19,6 +19,9 @@
 	z-index: 1;
 	user-select: none;
 	animation: slide-from-top 0.8s 0s forwards cubic-bezier(0.11, 0, 0, 1);
+	.logo_link {
+		width: 100%;
+	}
 }
 
 .logo {

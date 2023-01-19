@@ -32,9 +32,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      <Image className={classes.home_chefImg} src={chef} alt="A Chef" />
-
+      <Image className={classes.home_chefImg} src={chef} alt="A_Chef" />
     </div>
   );
 }

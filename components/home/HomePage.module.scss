@@ -87,3 +87,23 @@
 	}
 	animation: slide-from-bottom 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
+
+@media only screen and (max-width: 770px) {
+	.home {
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		height: 90vh;
+		justify-content: none;
+	}
+	.home_chefImg {
+		height: 50vh;
+		width: auto;
+	}
+	.home_quote {
+		font-size: 2rem;
+	}
+	.wrapper {
+		font-size: 1.2rem;
+		width: 85%;
+	}
+}

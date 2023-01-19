@@ -10,7 +10,7 @@ function DataNotFound() {
         <h1>Ooops..</h1>
         <p>Sorry, data not found :/</p>
       </section>
-      <Image className={classes.error404_image} src={error404} />
+      <Image alt="noDataFound" className={classes.error404_image} src={error404} />
     </div>
   );
 }

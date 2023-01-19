@@ -30,15 +30,15 @@ function Favourites() {
   if (data.length === 0) {
     return (
       <div className={classes.noFavourites_conatiner}>
-        <Image alt="noFavourites" src={noFavourites} />
         <h1>No Favouirtes added yet</h1>
+        <Image alt="noFavourites" src={noFavourites} />
       </div>
     );
   }
 
   return (
     <>
-      <h1 className={classes.myFavourits_heading}>My Favourites .... </h1>
+      <h1 className={classes.myFavourits_heading}>My Favourites ... </h1>
       <div className={classes.favourites_container}>
         {data.map((ele) => (
           <div key={ele.name + ele.calories} className={cardClasses.card}>

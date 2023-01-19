@@ -48,7 +48,9 @@ function FavoriteIconComponent({ info }) {
       {Favorites === true
         ? (
           <FavoriteIcon
-            style={{ fill: 'red', transform: 'scale(1.05)' }}
+            style={
+              { fill: 'red', transform: 'scale(1.05)', transition: '0.5s ease-in-out' }
+              }
             onClick={handleToggleFavourite}
           />
         )

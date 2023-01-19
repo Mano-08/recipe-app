@@ -5,7 +5,7 @@ import classes from './Navbar.module.scss';
 function Navbar() {
   return (
     <navbar className={classes.navbar}>
-      <Link href="/"><p className={classes.logo}>Recipe-App</p></Link>
+      <Link href="/" className={classes.logo_link}><p className={classes.logo}>Recipe-App</p></Link>
       <ul className={classes.navlinks}>
         <li>
           <Link href="/explore" className={classes.link}>

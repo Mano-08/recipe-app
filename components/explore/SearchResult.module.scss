@@ -1,3 +1,10 @@
+@keyframes slide-in {
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
 .card {
 	min-height: 60vh;
 	height: auto;
@@ -12,6 +19,14 @@
 		height: auto;
 		width: 100%;
 		object-fit: cover;
+	}
+}
+
+@for $i from 1 through 18 {
+	.card:nth-child(#{$i}) {
+		transform: translateX(10%);
+		opacity: 0;
+		animation: slide-in 0.3s $i * 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 	}
 }
 
@@ -43,6 +58,7 @@
 .recipe_buttons {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 2%;
 
 	button {
 		bottom: 0;
@@ -75,5 +91,14 @@
 			background-color: rgb(255, 255, 255);
 			color: rgb(0, 0, 0);
 		}
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	.card {
+		width: 37.5vh;
+	}
+	.recipe_buttons {
+		margin-bottom: 0;
 	}
 }
