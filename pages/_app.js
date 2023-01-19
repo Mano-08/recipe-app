@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { React, useState } from 'react';
 import '../styles/globals.css';
-import { Toaster } from 'react-hot-toast';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Router from 'next/router';
 import { ThreeDots } from 'react-loader-spinner';
 import NProgress from 'nprogress';
@@ -32,16 +33,23 @@ export default function App({ Component, pageProps }) {
   });
   return (
     <QueryClientProvider client={queryClient}>
-      <Toaster
+      <ToastContainer
         position="bottom-right"
-        toastOptions={{
-          toastOptions: { style: { fontSize: '1.4rem' } },
-        }}
+        autoClose={1650}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
       />
       <Layout>
         {LoadingPage && (
         <div className={classes.routeLoader}>
           <ThreeDots
+            disableTypography
             height="80"
             width="80"
             radius="9"

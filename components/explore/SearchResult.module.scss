@@ -94,6 +94,27 @@
 	}
 }
 
+.dialogCloseButton {
+	height: 2.5em;
+	background-color: rgb(205, 16, 16);
+	color: white;
+	font-size: 1.2rem;
+	border: none;
+}
+
+.dialogTitle {
+	color: rgb(30, 29, 29);
+	width: 100%;
+	text-align: center;
+}
+
+.dialogIngredientsList {
+	margin: 5%;
+	li {
+		color: rgb(61, 61, 61);
+	}
+}
+
 @media only screen and (max-width: 770px) {
 	.card {
 		width: 37.5vh;

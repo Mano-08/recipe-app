@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import dynamic from 'next/dynamic';
+import { toast } from 'react-toastify';
 
 function FavoriteIconComponent({ info }) {
   function getStorageList() {
@@ -26,6 +27,15 @@ function FavoriteIconComponent({ info }) {
 
   const handleToggleFavourite = () => {
     if (Favorites) {
+      toast.error('Removed from favourites', {
+        position: 'bottom-right',
+        autoClose: 1650,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: 'light',
+      });
       const currentList = getStorageList();
       const removeItemName = info.name;
       const removeItemCalories = info.calories;
@@ -37,7 +47,15 @@ function FavoriteIconComponent({ info }) {
         setItems(currentList);
       }
     } else {
-      const currentList = getStorageList();
+      toast.success('Added to favourites', {
+        position: 'bottom-right',
+        autoClose: 1650,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: 'light',
+      }); const currentList = getStorageList();
       const newList = [...currentList, info];
       setItems(newList);
     }

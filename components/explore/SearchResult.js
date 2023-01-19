@@ -28,13 +28,14 @@ function SearchResult(props) {
   return (
     <div className={classes.card}>
       <Dialog open={display} onKeyDown={handleEscape}>
-        <DialogTitle><h1>Ingredients</h1></DialogTitle>
+        <DialogTitle><h1 className={classes.dialogTitle}>Ingredients</h1></DialogTitle>
         <DialogContent>
-          <ul>
+          <ul className={classes.dialogIngredientsList}>
             {ingredients.map((element) => <li key={element}>{element}</li>)}
           </ul>
         </DialogContent>
         <button
+          className={classes.dialogCloseButton}
           type="button"
           onClick={handleClose}
         >
