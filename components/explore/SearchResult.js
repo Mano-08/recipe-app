@@ -36,7 +36,7 @@ function SearchResult(props) {
         </DialogContent>
         <button
           type="button"
-          onClick={() => handleClose}
+          onClick={handleClose}
         >
           Close it
 

@@ -46,7 +46,12 @@ function FavoriteIconComponent({ info }) {
   return (
     <>
       {Favorites === true
-        ? <FavoriteIcon style={{ fill: 'red' }} onClick={handleToggleFavourite} />
+        ? (
+          <FavoriteIcon
+            style={{ fill: 'red', transform: 'scale(1.05)' }}
+            onClick={handleToggleFavourite}
+          />
+        )
         : <FavoriteBorderIcon onClick={handleToggleFavourite} />}
       <div style={{ display: 'none' }} />
     </>
