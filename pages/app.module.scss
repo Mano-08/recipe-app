@@ -1,0 +1,10 @@
+.routeLoader {
+	position: fixed;
+	z-index: 3;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(1, 0, 0, 0.645);
+}

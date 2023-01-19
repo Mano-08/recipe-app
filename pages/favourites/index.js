@@ -41,7 +41,7 @@ function Favourites() {
       <h1 className={classes.myFavourits_heading}>My Favourites .... </h1>
       <div className={classes.favourites_container}>
         {data.map((ele) => (
-          <div className={cardClasses.card}>
+          <div key={ele.name + ele.calories} className={cardClasses.card}>
             <Dialog open={display} onKeyDown={handleEscape}>
               <DialogTitle><h1>Ingredients</h1></DialogTitle>
               <DialogContent>

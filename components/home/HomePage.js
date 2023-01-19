@@ -17,10 +17,9 @@ export default function HomePage() {
           </span>
         </p>
 
-        <p>
-          This recipe API has the data of thousands of food,
-          including international dishes.
-        </p>
+        {/* <p>
+          This recipe API has the data of over a hundred thousand dishes
+        </p> */}
 
         <div className={classes.wrapper}>
           <p>

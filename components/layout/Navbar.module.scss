@@ -1,7 +1,16 @@
+@keyframes slide-from-top {
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 .navbar {
 	position: fixed;
-	height: 10vh;
+	height: 4.2em;
 	width: 100%;
+	opacity: 0;
+	transform: translateY(-10vh);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -9,11 +18,12 @@
 	align-items: center;
 	z-index: 1;
 	user-select: none;
+	animation: slide-from-top 0.8s 0s forwards cubic-bezier(0.11, 0, 0, 1);
 }
 
 .logo {
 	font-family: 'Schoolbell', cursive;
-	font-size: 2.5rem;
+	font-size: 1.7rem;
 	margin-left: 5%;
 	cursor: default;
 	color: orange;
