@@ -30,7 +30,7 @@ function Favourites() {
   if (data.length === 0) {
     return (
       <div className={classes.noFavourites_conatiner}>
-        <h1>No Favouirtes added yet</h1>
+        <h1>Favourites list is empty</h1>
         <Image alt="noFavourites" src={noFavourites} />
       </div>
     );
