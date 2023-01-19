@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	overflow: hidden;
 }
 
 .frame {
@@ -21,14 +22,33 @@
 
 .home_quote {
 	font-size: 3rem;
+	opacity: 0;
+	transform: translateX(-20vh);
+	@keyframes slide-from-left {
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	animation: slide-from-left 0.6s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes slide-from-right {
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .home_chefImg {
 	position: relative;
+	transform: translateX(20vh);
+	opacity: 0;
 	height: 85vh;
 	width: auto;
 	object-fit: cover;
 	user-select: none;
+	animation: slide-from-right 0.6s 0.4s forwards cubic-bezier(0.11, 0, 0.11, 0);
 }
 
 .home_button {
@@ -40,6 +60,7 @@
 	font-weight: 600;
 	height: 8vh;
 	display: flex;
+	border-radius: 2px;
 	justify-content: center;
 	align-items: center;
 	user-select: none;
@@ -49,11 +70,40 @@
 	outline-style: none;
 }
 .home_button:hover {
-	background-color: rgb(0, 138, 0);
+	background-color: rgb(0, 136, 0);
 }
 
 .wrapper {
 	padding-top: 5vh;
 	font-size: 1.4rem;
 	display: inline-grid;
+	transform: translateY(5vh);
+	opacity: 0;
+	@keyframes slide-from-bottom {
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	animation: slide-from-bottom 0.9s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@media only screen and (max-width: 770px) {
+	.home {
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		height: 90vh;
+		justify-content: none;
+	}
+	.home_chefImg {
+		height: 50vh;
+		width: auto;
+	}
+	.home_quote {
+		font-size: 2rem;
+	}
+	.wrapper {
+		font-size: 1.2rem;
+		width: 85%;
+	}
 }

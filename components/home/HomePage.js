@@ -17,11 +17,6 @@ export default function HomePage() {
           </span>
         </p>
 
-        <p>
-          This recipe API has the data of thousands of food,
-          including international dishes.
-        </p>
-
         <div className={classes.wrapper}>
           <p>
             Uncover your favourite recipe Now!
@@ -33,9 +28,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      <Image className={classes.home_chefImg} src={chef} alt="A Chef" />
-
+      <Image className={classes.home_chefImg} src={chef} alt="A_Chef" />
     </div>
   );
 }

@@ -1,52 +1,64 @@
 import { Dialog, DialogContent, DialogTitle } from '@mui/material';
 import Link from 'next/link';
-import React from 'react';
+import {
+  React, useState,
+} from 'react';
+import FavoriteIconPage from '../favourites/FavouriteIcon';
 import classes from './SearchResult.module.scss';
 
 function SearchResult(props) {
   const { info } = props;
   const calories = Math.round((info.recipe.calories + Number.EPSILON) * 100) / 100;
-  const [display, setDisplay] = React.useState(false);
   const ingredients = info.recipe.ingredientLines;
+  const name = info.recipe.label;
+  const recipeURL = info.recipe.url;
+  const imageURL = info.recipe.image;
+
+  const [display, setDisplay] = useState(false);
+
   const handleEscape = (e) => {
     if (e.key === 'Escape' && display === true) {
       setDisplay(false);
     }
   };
-
   const handleClose = () => {
     display === true ? setDisplay(false) : setDisplay(true);
   };
 
   return (
     <div className={classes.card}>
-      <Dialog disableTypography PaperProps={{ id: 'dialogBox' }} open={display} onKeyDown={handleEscape}>
-        <DialogTitle disableTypography PaperProps={{ style: { color: 'red' } }}><h1>Ingredients</h1></DialogTitle>
+      <Dialog open={display} onKeyDown={handleEscape}>
+        <DialogTitle><h1 className={classes.dialogTitle}>Ingredients</h1></DialogTitle>
         <DialogContent>
-          <ul>
-            {ingredients.map((element) => <li>{element}</li>)}
+          <ul className={classes.dialogIngredientsList}>
+            {ingredients.map((element) => <li key={element}>{element}</li>)}
           </ul>
         </DialogContent>
         <button
+          className={classes.dialogCloseButton}
           type="button"
           onClick={handleClose}
         >
-          Close it!
+          Close it
 
         </button>
       </Dialog>
-      <img alt="dish_image" src={info.recipe.image} />
+      <img alt="dish_image" src={imageURL} />
 
       <div className={classes.dish_info}>
         <section className={classes.dish_name}>
-          <p>{info.recipe.label}</p>
+          <p>{name}</p>
+          <FavoriteIconPage info={{
+            name, imageURL, calories, ingredients, recipeURL,
+          }}
+          />
         </section>
         <section className={classes.dish_numeric_info}>
           <p>{`Calories: ${calories}`}</p>
         </section>
         <section className={classes.recipe_buttons}>
           <button type="button" onClick={handleClose}>Ingredients</button>
-          <Link href={info.recipe.url} target="_blank"><button type="button">Recipe</button></Link>
+          <Link href={recipeURL} target="_blank"><button type="button">Recipe</button></Link>
         </section>
       </div>
     </div>

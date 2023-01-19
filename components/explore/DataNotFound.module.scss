@@ -3,19 +3,65 @@
 	justify-content: center;
 	flex-direction: row;
 	height: 60vh;
+	overflow: hidden;
 }
 
-.error404_message h1 {
-	font-size: 4em;
+@keyframes slide-in {
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
-.error404_message p {
-	font-size: 1.5rem;
+.error404_message {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	h1 {
+		font-size: 5em;
+		opacity: 0;
+		transform: translateX(-40vw);
+		animation: slide-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+	}
+	p {
+		font-size: 1.5rem;
+		opacity: 0;
+		transform: translateX(-40vw);
+		animation: slide-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+		padding-bottom: 15%;
+	}
 }
-
 .error404_image {
-	margin-left: 3%;
-	height: 40vh;
+	margin: 5%;
+	height: auto;
 	width: auto;
 	border-radius: 50%;
+	opacity: 0;
+	transform: translateX(40vw);
+	animation: slide-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@media only screen and (max-width: 770px) {
+	.error404_page {
+		flex-direction: column;
+		width: 90%;
+		text-align: center;
+		margin-left: 5%;
+		margin-bottom: 10%;
+		height: auto;
+	}
+	.error404_message {
+		h1 {
+			font-size: 3.5em;
+			opacity: 0;
+			transform: translateX(-40vw);
+			animation: slide-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+		}
+		p {
+			font-size: 1.5rem;
+			opacity: 0;
+			transform: translateX(-40vw);
+			animation: slide-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+		}
+	}
 }
