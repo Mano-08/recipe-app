@@ -30,7 +30,7 @@
 			transform: translateX(0);
 		}
 	}
-	animation: slide-from-left 0.6s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+	animation: slide-from-left 0.6s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes slide-from-right {
@@ -48,7 +48,7 @@
 	width: auto;
 	object-fit: cover;
 	user-select: none;
-	animation: slide-from-right 0.6s 0.5s forwards cubic-bezier(0.11, 0, 0.11, 0);
+	animation: slide-from-right 0.6s 0.4s forwards cubic-bezier(0.11, 0, 0.11, 0);
 }
 
 .home_button {
@@ -77,7 +77,7 @@
 	padding-top: 5vh;
 	font-size: 1.4rem;
 	display: inline-grid;
-	transform: translateY(10vh);
+	transform: translateY(5vh);
 	opacity: 0;
 	@keyframes slide-from-bottom {
 		100% {
@@ -85,7 +85,7 @@
 			opacity: 1;
 		}
 	}
-	animation: slide-from-bottom 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+	animation: slide-from-bottom 0.9s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @media only screen and (max-width: 770px) {
