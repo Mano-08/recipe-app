@@ -92,12 +92,15 @@
 	.home {
 		-webkit-flex-direction: column-reverse;
 		flex-direction: column-reverse;
-		height: 90vh;
+		height: 87vh;
 		justify-content: none;
 	}
 	.home_chefImg {
 		height: 50vh;
 		width: auto;
+	}
+	.home_text {
+		margin: 0 1%;
 	}
 	.home_quote {
 		font-size: 2rem;
