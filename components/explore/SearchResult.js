@@ -1,4 +1,5 @@
 import { Dialog, DialogContent, DialogTitle } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   React, useState,
@@ -43,7 +44,7 @@ function SearchResult(props) {
 
         </button>
       </Dialog>
-      <img alt="dish_image" src={imageURL} />
+      <Image src={imageURL} alt="dishImage" width={500} height={500} />
 
       <div className={classes.dish_info}>
         <section className={classes.dish_name}>
