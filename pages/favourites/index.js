@@ -57,7 +57,7 @@ function Favourites() {
 
               </button>
             </Dialog>
-            <img alt="dish_image" src={ele.imageURL} />
+            <Image loader={() => ele.imageURL} height={300} width={300} alt="dish_image" src={ele.imageURL} />
 
             <div className={cardClasses.dish_info}>
               <section className={cardClasses.dish_name}>
