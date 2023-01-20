@@ -44,7 +44,7 @@ function SearchResult(props) {
 
         </button>
       </Dialog>
-      <Image src={imageURL} alt="dishImage" width={500} height={500} />
+      <Image loader={() => imageURL} src={imageURL} alt="dishImage" width={500} height={500} />
 
       <div className={classes.dish_info}>
         <section className={classes.dish_name}>

@@ -1,18 +1,17 @@
 module.exports = {
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   env: {
     browser: true,
     es2021: true,
-    "node": true
+    node: true,
   },
   extends: [
-    'plugin:@next/next/recommended',
-    'eslint:recommended',
     'plugin:react/recommended',
+    'airbnb',
 
   ],
   overrides: [

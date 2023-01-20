@@ -8,7 +8,7 @@ import useDebounce from '../hooks/useDebounce';
 import SearchResult from '../../components/explore/SearchResult';
 import DataNotFound from '../../components/explore/DataNotFound';
 import Error from '../../components/explore/Error';
-import preloadedData from './preloadedData';
+import preloadedData from './preloadedData.json';
 
 function Recipes() {
   const [search, setSearch] = useState('');
@@ -30,7 +30,7 @@ function Recipes() {
     if (!isError && !isLoading && search === '') {
       return (
         <div className={classes.searchResults}>
-          {preloadedData.map((element) => {
+          {preloadedData.recipes.map((element) => {
             i += 1;
             return (<SearchResult key={i} info={element} />);
           })}
