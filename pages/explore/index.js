@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Loader from '../../components/explore/Loader';
 import classes from './recipes.module.scss';
 import searchImage from '../../images/search.png';
-import useDebounce from '../hooks/useDebounce';
+// import useDebounce from '../hooks/useDebounce';
 import SearchResult from '../../components/explore/SearchResult';
 import DataNotFound from '../../components/explore/DataNotFound';
 import Error from '../../components/explore/Error';
@@ -12,13 +12,12 @@ import preloadedData from './preloadedData.json';
 
 function Recipes() {
   const [search, setSearch] = useState('');
-  const debouncedSearchTerm = useDebounce(search, 200);
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['search', debouncedSearchTerm],
+    queryKey: ['search', search],
     queryFn: () => {
-      if (debouncedSearchTerm) {
-        return fetch(`https://api.edamam.com/search?q=${debouncedSearchTerm}&to=18&app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}`)
+      if (search) {
+        return fetch(`https://api.edamam.com/search?q=${search}&to=18&app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}`)
           .then((res) => res.json());
       }
       return { hits: [] };
