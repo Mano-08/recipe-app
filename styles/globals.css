@@ -1,7 +1,9 @@
 html {
 	scroll-behavior: smooth;
 }
-
+:root {
+	--toastify-text-color-light: #ff0000;
+}
 * {
 	font-family: 'Ubuntu', sans-serif;
 	box-sizing: border-box;

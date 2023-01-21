@@ -6,7 +6,6 @@
 }
 
 .card {
-	min-height: 60vh;
 	height: auto;
 	width: 50vh;
 	margin-left: 2.5%;
@@ -116,13 +115,27 @@
 }
 
 @media only screen and (max-width: 770px) {
-	.card {
-		width: 90%;
-	}
 	.dish_name {
-		font-size: 1.35rem;
+		font-size: 1.5rem;
+	}
+	.dish_numeric_info p {
+		font-size: 1.1rem;
 	}
 	.recipe_buttons {
 		margin-bottom: 0;
+		button {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.dish_name {
+		font-size: 1.28em;
+	}
+	.recipe_buttons {
+		button {
+			font-size: 1rem;
+		}
 	}
 }
