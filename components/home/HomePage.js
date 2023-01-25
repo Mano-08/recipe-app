@@ -28,7 +28,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-      <Image className={classes.home_chefImg} src={chef} alt="A_Chef" />
+      <Image className={classes.home_chefImg} src={chef} alt="A_Chef" priority />
     </div>
   );
 }
