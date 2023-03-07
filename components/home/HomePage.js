@@ -7,7 +7,6 @@ import chef from '../../images/chef.png';
 export default function HomePage() {
   return (
     <div className={classes.home}>
-
       <section className={classes.home_text}>
         <p className={classes.home_quote}>
           Finding recipes made
@@ -18,17 +17,21 @@ export default function HomePage() {
         </p>
 
         <div className={classes.wrapper}>
-          <p>
+          <span>
             Uncover your favourite recipe Now!
-          </p>
+          </span>
           <Link href="/explore" className={classes.home_button}>
-            <div type="button">
+            <span type="button">
               Explore All
-            </div>
+            </span>
           </Link>
         </div>
       </section>
-      <Image className={classes.home_chefImg} src={chef} alt="A_Chef" priority />
+      <div id={classes.imageWrapperHome}>
+        <div id={classes.designerImageHome} />
+        <Image className={classes.home_chefImg} src={chef} alt="A_Chef" priority />
+      </div>
+
     </div>
   );
 }

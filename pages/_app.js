@@ -45,8 +45,7 @@ export default function App({ Component, pageProps }) {
         pauseOnHover={false}
         theme="light"
       />
-      <Layout>
-        {LoadingPage && (
+      {LoadingPage && (
         <div className={classes.routeLoader}>
           <ThreeDots
             disableTypography
@@ -61,7 +60,8 @@ export default function App({ Component, pageProps }) {
           />
 
         </div>
-        )}
+      )}
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </QueryClientProvider>
