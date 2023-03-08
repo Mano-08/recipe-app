@@ -18,6 +18,7 @@ const nextConfig = {
       'images.immediate.co.uk',
       'irepo.primecp.com',
       'whiteonricecouple.com',
+      'chopstickchronicles.com',
       'imagesvc.meredithcorp.io',
       'images.food52.com',
       'www.foodrepublic.com'],
